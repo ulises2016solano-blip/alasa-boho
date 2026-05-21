@@ -11,7 +11,7 @@ const BRAND = {
   mapsUrl: "https://www.google.com/maps/place/alasa/@19.2909515,-99.2188474,17z",
   location: "Acanceh 147, Lomas de Padierna, Tlalpan, 14200 CDMX",
   locationShort: "Lomas de Padierna · Tlalpan, CDMX",
-  waMessage: "¡Hola! Me interesa conocer más sobre Alasa Boho 🌿",
+  waMessage: "Hola! Me interesa conocer más sobre Alasa Boho 🌿",
 };
 
 const WA_LINK = (msg = BRAND.waMessage) =>
@@ -107,6 +107,7 @@ const Icon = {
 const GlobalStyles = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap');
+    @import url('https://db.onlinewebfonts.com/c/5da49843f66caf14799662bd12aa55a2?family=Dream+Avenue');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -121,6 +122,7 @@ const GlobalStyles = () => (
     ::-webkit-scrollbar-thumb { background: #c4a882; border-radius: 2px; }
 
     .font-display { font-family: 'Cormorant Garamond', serif; }
+    .font-dream   { font-family: 'Dream Avenue', 'Cormorant Garamond', serif; }
 
     .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.75s ease, transform 0.75s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -343,8 +345,8 @@ function Navbar() {
     <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 50, padding: scrolled ? "12px 0" : "20px 0", background: "rgba(250,247,244,0.97)", backdropFilter: "blur(12px)", boxShadow: scrolled ? "0 1px 0 rgba(196,168,130,0.25)" : "0 1px 0 rgba(196,168,130,0.08)", transition: "padding 0.4s ease, box-shadow 0.4s ease" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <div className="font-display" style={{ fontSize: 22, letterSpacing: "0.15em", color: "#3a2e26", fontWeight: 400 }}>ALASA</div>
-          <div style={{ fontSize: 9, letterSpacing: "0.4em", color: "#c4a882", fontWeight: 300, marginTop: -2 }}>BOHO</div>
+          <div className="font-dream" style={{ fontSize: 26, letterSpacing: "0.08em", color: "#3a2e26", fontWeight: 400, lineHeight: 1 }}>alasa</div>
+          <div style={{ fontSize: 9, letterSpacing: "0.4em", color: "#c4a882", fontWeight: 300, marginTop: 2, fontFamily: "'Jost', sans-serif" }}>BOHO</div>
         </div>
         <div style={{ display: "flex", gap: 36, alignItems: "center" }} className="hidden-mobile">
           {NAV_LINKS.map(({ label, id }) => (
@@ -410,7 +412,7 @@ function Hero() {
             style={{ background: "rgba(250,247,244,0.12)", border: "1.5px solid rgba(250,247,244,0.3)", color: "#faf7f4", padding: "14px 38px", fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", cursor: "pointer", borderRadius: 2, fontFamily: "'Jost', sans-serif", textDecoration: "none", transition: "all 0.35s" }}
             onMouseEnter={e => { e.currentTarget.style.background = "rgba(250,247,244,0.18)"; }}
             onMouseLeave={e => { e.currentTarget.style.background = "rgba(250,247,244,0.12)"; }}>
-            Escríbenos
+            Escribirnos
           </a>
         </div>
       </div>
@@ -934,8 +936,8 @@ function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 48, marginBottom: 56, flexWrap: "wrap" }} className="footer-top">
           {/* Brand */}
           <div>
-            <div className="font-display" style={{ fontSize: 26, color: "#faf7f4", fontWeight: 300, letterSpacing: "0.15em" }}>ALASA</div>
-            <div style={{ fontSize: 9, letterSpacing: "0.45em", color: "#c4a882", marginTop: -2, marginBottom: 18 }}>BOHO</div>
+            <div className="font-dream" style={{ fontSize: 32, color: "#faf7f4", fontWeight: 400, letterSpacing: "0.08em", lineHeight: 1 }}>alasa</div>
+            <div style={{ fontSize: 9, letterSpacing: "0.45em", color: "#c4a882", marginTop: 2, marginBottom: 18, fontFamily: "'Jost', sans-serif" }}>BOHO</div>
             <p style={{ fontSize: 12, lineHeight: 1.85, color: "rgba(250,247,244,0.35)", fontWeight: 300, maxWidth: 220 }}>
               Moda boho contemporánea para mujeres auténticas. Piezas únicas con esencia natural y elegante.
             </p>
