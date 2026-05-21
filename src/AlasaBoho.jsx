@@ -412,7 +412,7 @@ function Hero() {
             style={{ background: "rgba(250,247,244,0.12)", border: "1.5px solid rgba(250,247,244,0.3)", color: "#faf7f4", padding: "14px 38px", fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", cursor: "pointer", borderRadius: 2, fontFamily: "'Jost', sans-serif", textDecoration: "none", transition: "all 0.35s" }}
             onMouseEnter={e => { e.currentTarget.style.background = "rgba(250,247,244,0.18)"; }}
             onMouseLeave={e => { e.currentTarget.style.background = "rgba(250,247,244,0.12)"; }}>
-            Escribirnos
+            ESCRÍBENOS
           </a>
         </div>
       </div>
